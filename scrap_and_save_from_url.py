@@ -5,14 +5,21 @@ from mongodb_dao.mongodb_data_recorder import MongoDBDataRecorder
 from mongodb_dao.mongodb_config_grabber import MongoConfigGrabber
 from mongodb_dao.mongodb_summary_recorder import MongoDBSummaryRecorder
 
-class ScrapAndSaveFromURL():
-    def main(self):
-        urls=[
-            'https://www.idealista.com/point/venta-viviendas/12/con-precio-hasta_200000,precio-desde_120000,de-tres-dormitorios,de-cuatro-cinco-habitaciones-o-mas,ascensor,terraza,publicado_ultimas-48-horas/?shape=%28%28ghzuF%60hxT%3Fbz%60Apjb%40%3F%3Fcz%60Aqjb%40%3F%29%29&ordenado-por=fecha-publicacion-desc',
-            'https://www.idealista.com/point/venta-viviendas/12/con-precio-hasta_200000,precio-desde_120000,de-tres-dormitorios,de-cuatro-cinco-habitaciones-o-mas,ascensor,piscina,publicado_ultimas-48-horas/?shape=%28%28ghzuF%60hxT%3Fbz%60Apjb%40%3F%3Fcz%60Aqjb%40%3F%29%29&ordenado-por=fecha-publicacion-desc'
-        ]
+import json
 
-        scraper_idealista = ScraperSeleniumIdealista(urls)
+class ScrapAndSaveFromURL():
+    def __init__(self):
+        self.conf = self.load_conf()
+        self.urls = self.conf['idealista_scraper']
+
+    def load_conf(self):
+        with open('conf.json', 'r') as myfile:
+            data = myfile.read()
+        return json.loads(data)
+
+    def main(self):
+
+        scraper_idealista = ScraperSeleniumIdealista(self.urls)
 
         scraper_idealista.get_data()
         data_idealista = scraper_idealista.data

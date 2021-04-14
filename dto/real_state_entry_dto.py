@@ -3,7 +3,7 @@ import hashlib
 
 class RealStateEntryDTO:
 
-    def __init__(self,title,prize,meters,rooms,url_scrapped,url_element,url_first_page, floor, real_estate_link, real_estate_title, image):
+    def __init__(self,title,prize,meters,rooms,url_scrapped,url_element,url_first_page, floor, real_estate_link, real_estate_title, image, description):
         self.rooms = rooms
         self.title = title
         self.prize = prize
@@ -16,7 +16,7 @@ class RealStateEntryDTO:
         self.real_estate_title = real_estate_title
         self.floor = floor
         self.image = image
-
+        self.description = description
         self.construct_id_and_clean()
 
     def construct_id_and_clean(self):

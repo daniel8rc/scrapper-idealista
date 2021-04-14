@@ -91,10 +91,13 @@ class ScraperSeleniumIdealista:
                 rooms=home.find_elements_by_class_name('item-detail')[0].text.replace(" hab.","").strip()
                 meters=home.find_elements_by_class_name('item-detail')[1].text.replace(" m²","").strip()
                 floor=home.find_elements_by_class_name('item-detail')[2].text.strip()
+                description=home.find_elements_by_class_name('item-description')[0].text
+
                 dto=RealStateEntryDTO(
                     title,prize,meters,rooms,self.driver.current_url,url_element,url_from_db,
                     floor,
-                    real_estate_link, real_estate_title, image
+                    real_estate_link, real_estate_title, image,
+                    description
                 )
                 self.data[url_from_db]=self.data[url_from_db] + [dto]
 
