@@ -1,0 +1,11 @@
+tmp/
+data/
+.idea/
+.vscode/
+venv/
+geckodriver.log
+*.swp
+*.log
+__pycache__/
+
+*/__pycache__/*
