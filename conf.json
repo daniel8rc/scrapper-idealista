@@ -8,6 +8,6 @@
     "mongodb_url": "mongodb://root:rootpassword@localhost:27017",
     "idealista_scraper": [
         "https://www.idealista.com/point/venta-viviendas/12/con-precio-hasta_200000,precio-desde_120000,de-tres-dormitorios,de-cuatro-cinco-habitaciones-o-mas,ascensor,terraza,publicado_ultimas-48-horas/?shape=%28%28ghzuF%60hxT%3Fbz%60Apjb%40%3F%3Fcz%60Aqjb%40%3F%29%29&ordenado-por=fecha-publicacion-desc",
-        "https://www.idealista.com/point/venta-viviendas/12/con-precio-hasta_200000,precio-desde_120000,de-tres-dormitorios,de-cuatro-cinco-habitaciones-o-mas,ascensor,piscina,publicado_ultimas-48-horas/?shape=%28%28ghzuF%60hxT%3Fbz%60Apjb%40%3F%3Fcz%60Aqjb%40%3F%29%29&ordenado-por=fecha-publicacion-desc"
+        "https://www.idealista.com/point/venta-viviendas/12/con-precio-hasta_220000,precio-desde_120000,de-tres-dormitorios,de-cuatro-cinco-habitaciones-o-mas,ascensor,piscina,publicado_ultimas-48-horas/?shape=%28%28ghzuF%60hxT%3Fbz%60Apjb%40%3F%3Fcz%60Aqjb%40%3F%29%29&ordenado-por=fecha-publicacion-desc"
     ]
 }
